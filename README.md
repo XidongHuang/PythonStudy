@@ -15,15 +15,15 @@ Study Notes:
   ```Java
   String domain = "Hello";
   int num = 5;
-	String str = String.format("%s, today is July %sth.", domain, num);
-	System.out.println(str);
+  String str = String.format("%s, today is July %sth.", domain, num);
+  System.out.println(str);
   ```
   
   SQL use "?"<br>
   
   ```Java
   String sql = "SELECT name, owner, species, picture FROM test1 WHERE name=?";
-	ps = connection.prepareStatement(sql);
-	ps.setString(1, "Tom");
+  ps = connection.prepareStatement(sql);
+  ps.setString(1, "Tom");
   ``` 
         
