@@ -72,7 +72,7 @@ public class Example{
 
 	}
 }
-/---------------------------------------------/
+/*---------------------------------------------*/
 /*
 Javax Example.java
 Java Example 123 hello word
