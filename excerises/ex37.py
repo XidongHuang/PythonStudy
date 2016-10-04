@@ -17,3 +17,6 @@ float = 5.62
 print(float)
 
 print(float ** 2)
+
+strs = [1, 1, "0", "0", "String", "Double"]
+print(strs)

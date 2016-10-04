@@ -83,4 +83,79 @@ hello
 word
 */
 ```
+<h2>4. List, Dictionary (Map)</h2><br>
+Data Structure is an very important part of OOP languages, and List, Map (Dictionary), Set are all very classical in it. So this part I would try to display what are different and what are same between Java and Python. 
+<h4>List</h4><br>
+<b style="color: #f00">Similarities:</b><br>
+No matter in Java or Python, the length of List is changable, beginning index is 0, the orders of its values are beased on their adding order, also at the bottom is formed by array, and it can contain any kind of types, like Object, primitives, String. <i>(In Java, List can store any type if itself has no Generics restrict type)</i><br>
+<b style="color: #f00">Differences:</b><br>
+<i>Create</i>
+```Python
+# Python
+a_list =  ['1', 1, '1', 'String', 5.40]
+# [1, 1, 1, String, 5.40]
+```
+```Java
+List list = new ArrayList();
+// []
 
+// create List with Generics Type
+List<Integer> intList = ArrayList<Integer>();
+// []
+```
+<i>Add</i>
+```Python
+a_list.append("adding one")
+# [1, 1, 1, String, 5.40, adding one]
+```
+```Java
+list.add("adding one Java");
+//[adding one java]
+
+// Generics one
+intList.add(888);
+// [888]
+```
+<i>Delete</i>
+```Python
+# Python has "del" method to remove element in list
+rmovIndxNo = 3
+del a_list[rmovIndxNo]
+# [1, 1, 1, 5.40]
+```
+```Java
+list.remove(0);
+//[]
+
+//Generics one
+intList.remove(0);
+//[]
+```
+<i>Change</i>
+```Python
+# Python list is mutable
+a_list[0] = "new index 0"
+# [new index 0, 1, 1, 1, 5.40]
+```
+```Java
+list.add("old index 0");
+//[old index 0]
+list.set(0, "new index 0");
+//[new index 0]
+
+// same as Geneircs one
+```
+<i>Check</i>
+```Python
+print(a_list[2])
+# 1
+```
+```Java
+System.out.print(list.get(0));
+//new index 0
+```
+Notes: CPython uses an array of pointers; Jython uses an ArrayList, IronPython uses an array too.<br>
+But in Java, List is the sub-interface of Collection interface. It has ArrayList, LinkedList two main list implementing classes(Vector is too old to use). For ArrayList, it is still formed by array on the bottom, but Linked list is formed by double-linked list construction, which is very convenient and more efficient than ArrayList in field of adding, deleting continually. <i>Both are not synchronized(not Thread safe)</i><br>
+<h4>Dictionary/Map</h4><br>
+No matter in Dictionary or Map, they are all constructed as {Key: Values}.<br>
+To be Continue...

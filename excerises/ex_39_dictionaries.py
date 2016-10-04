@@ -8,13 +8,19 @@
 # -*- coding: utf-8 -*-
 
 # create a mapping of state to abbreviation
-states = {
+
+import collections
+
+temp  = {
 		'Oregon': 'OR',
 		'Florida': 'FL',
 		'California': 'CA',
 		'New York': 'NY',
 		'Michigan': 'MI'
 		}
+
+orderedDict = collections.OrderedDict
+states = orderedDict(sorted(temp.items(), key = lambda t:t[0]))
 
 # create a basic set of states and some cities in them
 cities = {
