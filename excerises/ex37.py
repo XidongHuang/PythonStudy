@@ -20,3 +20,15 @@ print(float ** 2)
 
 strs = [1, 1, "0", "0", "String", "Double"]
 print(strs)
+
+ditionary = {
+		1: "A",
+		2: "B",
+		3: "C",
+		1: "D"
+
+		}
+
+for key in ditionary:
+	print(key, ditionary[key])
+

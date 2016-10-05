@@ -85,10 +85,10 @@ word
 ```
 <h2>4. List, Dictionary (Map)</h2><br>
 Data Structure is an very important part of OOP languages, and List, Map (Dictionary), Set are all very classical in it. So this part I would try to display what are different and what are same between Java and Python. 
-<h4>List</h4><br>
+<h4>List</h4>
 <b style="color: #f00">Similarities:</b><br>
 No matter in Java or Python, the length of List is changable, beginning index is 0, the orders of its values are beased on their adding order, also at the bottom is formed by array, and it can contain any kind of types, like Object, primitives, String. <i>(In Java, List can store any type if itself has no Generics restrict type)</i><br>
-<b style="color: #f00">Differences:</b><br>
+<b style="color: #f00">Differences:</b>
 <i>Create</i>
 ```Python
 # Python
@@ -156,6 +156,55 @@ System.out.print(list.get(0));
 ```
 Notes: CPython uses an array of pointers; Jython uses an ArrayList, IronPython uses an array too.<br>
 But in Java, List is the sub-interface of Collection interface. It has ArrayList, LinkedList two main list implementing classes(Vector is too old to use). For ArrayList, it is still formed by array on the bottom, but Linked list is formed by double-linked list construction, which is very convenient and more efficient than ArrayList in field of adding, deleting continually. <i>Both are not synchronized(not Thread safe)</i><br>
-<h4>Dictionary/Map</h4><br>
-No matter in Dictionary or Map, they are all constructed as {Key: Values}.<br>
+<h4>Dictionary/Map</h4>
+No matter in Dictionary or Map, they are all constructed as {Key: Values} format. And the "Key" is stored as Set, "Values" is stored as List. Because the order(position) of elements in Set is defined by its hashcode, that is why there is always no two same keys, if add one that alreay exist, the second will replace the first element. Another hand, "Values" can be dunplicated in List.<br>
+For handle method of Dictionary, it is so much handy than Map's.
+<i>Ergodic and Delete</i>
+```Python
+dictionary = {
+			1: "A",
+			2: "B",
+			3: "C"
+			}
+
+for key in dictionary:
+	print(key, dictionary[key])
+"""
+Will print
+1 A
+2 B
+3 C
+"""
+
+# If need to delete an element in Dictionary, it is necessary to invoke "del" method
+del dictionary[2]
+"""
+Will print
+1 A
+3 C
+"""
+
+```
+```Java
+Map<Integer, String> map = new HashMap<>();
+map.put(1, "A");
+map.put(2, "B");
+map.put(3, "C");
+
+
+```
+Notes:
+In Java, if I want to store data in Map on order, I can use LinkedHashMap. But in Python, it is possible to invoke "OrderedDict" object in collections, then sort Dictionary by "Key" or "Values" directly.
+```Python
+import collections
+orderedDict = collections.OrderedDict
+
+dictionary_sort = orderedDict(sorted(dictionary.items(), key = lambda t:t[0]))
+```
+```Java
+Map<Integer, String> orderMap = new LinkedHashMap<>();
+orderMap.put(...);
+// Elements in orderMap will dispaly on the order of they were put in
+```
+<br>
 To be Continue...
