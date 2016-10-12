@@ -158,7 +158,7 @@ Notes: CPython uses an array of pointers; Jython uses an ArrayList, IronPython u
 But in Java, List is the sub-interface of Collection interface. It has ArrayList, LinkedList two main list implementing classes(Vector is too old to use). For ArrayList, it is still formed by array on the bottom, but Linked list is formed by double-linked list construction, which is very convenient and more efficient than ArrayList in field of adding, deleting continually. <i>Both are not synchronized(not Thread safe)</i><br>
 <h4>Dictionary/Map</h4>
 No matter in Dictionary or Map, they are all constructed as {Key: Values} format. And the "Key" is stored as Set, "Values" is stored as List. Because the order(position) of elements in Set is defined by its hashcode, that is why there is always no two same keys, if add one that alreay exist, the second will replace the first element. Another hand, "Values" can be dunplicated in List.<br>
-For handle method of Dictionary, it is so much handy than Map's.
+For handle method of Dictionary, it is so much handy than Map's.<br>
 <i>Ergodic and Delete</i>
 ```Python
 dictionary = {
