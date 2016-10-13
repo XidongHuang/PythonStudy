@@ -14,16 +14,16 @@ except ImportError:
 	from distutils.core import setup
 
 config = {
-		'description':'Excerise 47, Automated Testing',
+		'description':'Excerise 48, Advanced User Input',
 		'author': 'Tony',
 		'url': 'URL to get it at.',
 		'download_url': 'Where to download it.',
 		'author_email': 'xidonghuang@gmail.com',
 		'version': '0.1',
 		'install_requires': ['nose'],
-		'packages': ['ex47'],
+		'packages': ['ex48'],
 		'scripts': [],
-		'name': 'ex47'
+		'name': 'ex48'
 		}
 
 setup(**config)
