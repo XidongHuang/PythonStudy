@@ -1,8 +1,8 @@
 """*************************************************************************
-    > File Name: tests/NAME_test.py
+    > File Name: tests/NAME_tests.py
     > Author: XidongHuang (Tony)
     > Mail: xidonghuang@gmail.com 
-    > Created Time: Tue 11 Oct 23:05:35 2016
+    > Created Time: Wed 12 Oct 18:29:19 2016
  ************************************************************************"""
 
 # -*- coding: utf-8 -*-
@@ -18,4 +18,3 @@ def teardown():
 
 def test_basic():
 	print("I RAN!")
-

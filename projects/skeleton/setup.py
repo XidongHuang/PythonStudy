@@ -2,9 +2,9 @@
     > File Name: setup.py
     > Author: XidongHuang (Tony)
     > Mail: xidonghuang@gmail.com 
-    > Created Time: Tue 11 Oct 23:01:26 2016
+    > Created Time: Wed 12 Oct 18:25:20 2016
  ************************************************************************"""
-
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 try:
@@ -14,7 +14,7 @@ except ImportError:
 	from distutils.core import setup
 
 config = {
-		'description': 'My first Python project',
+		'description':'Tony\'s first project',
 		'author': 'Tony',
 		'url': 'URL to get it at.',
 		'download_url': 'Where to download it.',
@@ -22,9 +22,8 @@ config = {
 		'version': '0.1',
 		'install_requires': ['nose'],
 		'packages': ['NAME'],
-		'script': [],
+		'scripts': [],
 		'name': 'hello_world'
-
 		}
-		
+
 setup(**config)
